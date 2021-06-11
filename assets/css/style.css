@@ -1,0 +1,75 @@
+* {
+    line-height: 22px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    display: block;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* why does it only accept main section and not .class?? arent they the same?? */
+/* why cant i get my boxes even height?? without doing a fixed height bc on desktop, the top row is too big but if set to smaller, then it wont look right on tablet*/
+main section {
+    width: 30%;
+    height: 350px;
+    border: 2px dashed black;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 1% auto;
+    background-color: rgba(240, 239, 239, 0.911);
+}
+
+.card h2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 85%;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    padding: 2%;
+    background-color:lightblue;
+    color: darkblue;
+    box-sizing: border-box;
+    position: relative;
+    margin: -40px auto auto auto;
+  }
+
+.card p {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+.card pre {
+    width: 85%;
+    border: 2px solid lightblue;
+    background-color: darkblue;
+    color: lightblue;
+    font-family: monospace;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    white-space: pre-wrap;
+    tab-size: 4;
+  }
+
