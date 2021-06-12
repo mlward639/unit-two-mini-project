@@ -1,6 +1,12 @@
 * {
     line-height: 22px;
     box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --darkblue: darkblue; 
+    --lightblue: lightblue; 
 }
 
 body {
@@ -14,6 +20,10 @@ header {
     flex-wrap: nowrap;
     display: block;
     text-align: center;
+}
+
+h1 {
+    font-size: x-large;
 }
 
 
@@ -41,14 +51,20 @@ main section {
     flex-wrap: nowrap;
     justify-content: center;
     width: 85%;
-    border: 2px solid darkblue;
+    border: 2px solid var(--darkblue);
     border-radius: 15px;
     padding: 2%;
-    background-color:lightblue;
-    color: darkblue;
+    background-color:var(--lightblue);
+    color: var(--darkblue);
     box-sizing: border-box;
     position: relative;
     margin: -40px auto auto auto;
+    transition: font-size 4s 1s;
+  }
+
+/* hover over h2 causing font size to grow */
+.card h2:hover {
+    font-size: 36px;
   }
 
 .card p {
@@ -61,9 +77,9 @@ main section {
 
 .card pre {
     width: 85%;
-    border: 2px solid lightblue;
-    background-color: darkblue;
-    color: lightblue;
+    border: 2px solid var(--lightblue);
+    background-color: var(--darkblue);
+    color: var(--lightblue);
     font-family: monospace;
     padding: 2%;
     display: flex;
@@ -71,5 +87,31 @@ main section {
     justify-content: flex-start;
     white-space: pre-wrap;
     tab-size: 4;
+    user-select: all;
+    background-image: linear-gradient(var(--darkblue) 0%, rgb(67, 67, 141) 100%);
+    }
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
 
+  span.heart {
+      color: red;
+  }
+
+/* On tablet at size 768px and above, display two CSS code snippets per row */
+@media screen and (max-width: 992px) {
+    main section {
+        width: 50%;
+     }
+}
+
+/* On mobile device, under 768px, display one CSS code snippet per row */
+@media screen and (max-width: 768px) {
+    main section {
+        width: 100%;
+    }
+}
